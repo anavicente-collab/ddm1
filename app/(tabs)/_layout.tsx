@@ -32,9 +32,9 @@ export default function TabLayout() {
   />
 
   <Tabs.Screen
-    name="agentes"
+    name="ken"
     options={{
-      title: 'Agentes',
+      title: 'O Ken',
       tabBarIcon: ({ color }) => (
         <IconSymbol
           size={28}
@@ -46,9 +46,9 @@ export default function TabLayout() {
   />
 
   <Tabs.Screen
-    name="mapas"
+    name="raquelle"
     options={{
-      title: 'Mapas',
+      title: 'A Raquelle',
       tabBarIcon: ({ color }) => (
         <IconSymbol
           size={28}
@@ -60,9 +60,9 @@ export default function TabLayout() {
   />
 
   <Tabs.Screen
-    name="competitivo"
+    name="ryan"
     options={{
-      title: 'Competitivo',
+      title: 'O Ryan',
       tabBarIcon: ({ color }) => (
         <IconSymbol
           size={28}

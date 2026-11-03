@@ -1,10 +1,9 @@
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import {
   ImageBackground,
   ScrollView,
   StyleSheet,
   Text,
-  View,
+  View
 } from 'react-native';
 
 export default function HomeScreen() {
@@ -13,32 +12,25 @@ export default function HomeScreen() {
     <View
       style={styles.container}
     >
-
-      <View
-        style={styles.header}>
-        <Text style={styles.title}>
-          Valorant Guia
-        </Text>
-        <View style={styles.profile}>
-          <IconSymbol
-            size={28}
-            name="person.fill"
-            color="white"
-          />
-        </View>
-      </View>
-
+    <View style={styles.header}>
       <ImageBackground
-        source={require('@/assets/images/agent-viper-valorant-riot-video-game-wallpaper-2560x1024_99.jpg')}
+        source={require('@/assets/images/Barbie_Logo.svg')}
         style={styles.fundo}
         resizeMode="contain"
       >
       </ImageBackground>
+    </View>
 
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.content}
       >
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+          O Nome: Batizada em homenagem à filha da criadora (Bárbara), enquanto o namorado Ken (lançado em 1961)
+           foi nomeado em homenagem ao filho de Ruth, Kenneth.
+        </Text>
+      </View>
       </ScrollView>
 
     </View>
@@ -48,17 +40,10 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: '#f1aef4ef',
   },
 
-  header: {
-    height: 60,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    backgroundColor: '#1E1E1E',
-  },
+ 
 
   fundo: {
     height: 180,
@@ -67,13 +52,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
-  profile: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#555',
+  header: {
+    height: 300,
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    backgroundColor: '#ffffff',
   },
 
   title: {
@@ -90,4 +75,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
 
+  texto: {
+    fontSize: 22
+  },
+
+  ContainerTexto: {
+    padding: 25
+  }
 });
