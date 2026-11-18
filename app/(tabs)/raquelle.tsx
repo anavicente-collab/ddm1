@@ -1,10 +1,9 @@
-import { IconSymbol } from '@/components/ui/icon-symbol';
 import {
-    Pressable,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View,
+  ImageBackground,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 
 export default function HomeScreen() {
@@ -13,65 +12,43 @@ export default function HomeScreen() {
     <View
       style={styles.container}
     >
-
-      <View
-        style={styles.header}>
-        <Text style={styles.title}>
-          Harr
-        </Text>
-        <View style={styles.profile}></View>
-      </View>
+    <View style={styles.header}>
+      <ImageBackground
+        source={require('@/assets/images/raquelle (2).png')}
+        style={styles.fundo}
+        resizeMode="contain"
+      >
+      </ImageBackground>
+    </View>
 
       <ScrollView
         style={styles.scrollView}
         contentContainerStyle={styles.content}
       >
-        <View style={styles.post}>
-
-          <View style={styles.postHeader}>
-            <View style={styles.postProfile}>
-            </View>
-
-            <View style={styles.postUserInfo}>
-              <Text style={styles.postName}>Ariel</Text>
-              <Text style={styles.postUsername}>@ariel</Text>
-            </View>
-          </View>
-
-          <Text style={styles.postText}>
-            {/* texto do post */}
-            ariel
-          </Text>
-
-          <View style={styles.postActions}>
-
-            <Pressable>
-              <IconSymbol
-                size={20}
-                name="paperplane.fill"
-                color="#A0A0A0"
-              />
-            </Pressable>
-
-            <Pressable>
-              <IconSymbol
-                size={20}
-                name="paperplane.fill"
-                color="#A0A0A0"
-              />
-            </Pressable>
-
-            <Pressable>
-              <IconSymbol
-                size={20}
-                name="paperplane.fill"
-                color="#A0A0A0"
-              />
-            </Pressable>
-
-          </View>
-
-        </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+          * Estreia no Mercado: Foi lançada originalmente pela Mattel em 2006 na linha de 
+          bonecas Barbie Fashion Fever.
+        </Text>
+      </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+        * De Amiga a Rival: Criada inicialmente para ser apenas mais uma amiga, a Mattel a transformou em rival para criar um contraste dinâmico com 
+         a personalidade sempre perfeita da Barbie.
+        </Text>
+      </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+          * A "Vilã" Cômica: Ao contrário de vilãs tradicionais, Raquelle não é realmente má. Ela é egocêntrica, invejosa e melodramática, e seus planos para sabotar a Barbie
+           quase sempre dão errado de forma hilária.
+        </Text>
+      </View>
+       <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+         * Estilo de Moda: Seu lema é "Nunca subestime o poder do visual perfeito". Seu 
+         guarda-roupa é sofisticado e ousado, marcado por tons escuros, dourado, vermelho e estampas de animais.
+         </Text>
+      </View>
       </ScrollView>
 
     </View>
@@ -81,23 +58,26 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: '#cd95ffef',
+  },
+
+ 
+
+  fundo: {
+    height: 250,
+    width: '100%',
+    justifyContent: 'center',
+    padding: 190
   },
 
   header: {
-    height: 60,
+    height: 150,
+
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    backgroundColor: '#1E1E1E',
-  },
-
-  profile: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#555',
+    backgroundColor: '#ffffff',
   },
 
   title: {
@@ -114,46 +94,11 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
   },
 
-  post: {
-    width: '100%',
-    padding: 15,
+  texto: {
+    fontSize: 15
   },
 
-  postHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-
-  postProfile: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: '#555',
-  },
-
-  postUserInfo: {
-    marginLeft: 10,
-  },
-
-  postName: {
-    color: '#FFFFFF',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-
-  postUsername: {
-    color: '#c1c1c1',
-    fontSize: 14,
-  },
-
-  postText: {
-    color: '#FFFFFF',
-    fontSize: 16,
-  },
-
-  postActions: {
-    flexDirection: 'row',
-    gap: 30,
+  ContainerTexto: {
+    padding: 20
   }
-
 });

@@ -6,6 +6,7 @@ import {
   View
 } from 'react-native';
 
+
 export default function HomeScreen() {
   return (
 
@@ -27,8 +28,26 @@ export default function HomeScreen() {
       >
       <View style={styles.ContainerTexto}>
         <Text style={styles.texto}>
-          O Nome: Batizada em homenagem à filha da criadora (Bárbara), enquanto o namorado Ken (lançado em 1961)
+          * O Nome: Batizada em homenagem à filha da criadora (Bárbara), enquanto o namorado Ken (lançado em 1961)
            foi nomeado em homenagem ao filho de Ruth, Kenneth.
+        </Text>
+      </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+         * O Lançamento: Estreou na Feira Anual de Brinquedos de Nova York vestindo um maiô listrado em preto e branco, óculos de sol brancos
+          e cabelo preso em um rabo de cavalo loiro.
+        </Text>
+      </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+          * Sucesso nas Telas: Estrelou mais de 40 filmes animados (começando com Barbie em O Quebra-Nozes, em 2001) e conquistou o cinema live-action em 2023, em um filme dirigido por Greta Gerwig que se
+           tornou a maior bilheteria daquele ano.
+        </Text>
+      </View>
+      <View style={styles.ContainerTexto}>
+        <Text style={styles.texto}>
+          * Relacionamentos: Seu eterno namorado é o Ken (Kenneth Sean Carson), apresentado em 1961. O casal protagonizou uma separação midiática entre 2004 e 2011, período em que Barbie namorou o surfista australiano
+           Blaine antes de reatar com Ken.
         </Text>
       </View>
       </ScrollView>
@@ -46,14 +65,15 @@ const styles = StyleSheet.create({
  
 
   fundo: {
-    height: 180,
+    height: 100,
     width: '100%',
     justifyContent: 'center',
-    paddingHorizontal: 20,
+    padding: 60
   },
 
   header: {
-    height: 300,
+    height: 150,
+
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -76,10 +96,10 @@ const styles = StyleSheet.create({
   },
 
   texto: {
-    fontSize: 22
+    fontSize: 15
   },
 
   ContainerTexto: {
-    padding: 25
+    padding: 20
   }
 });
