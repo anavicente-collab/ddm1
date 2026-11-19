@@ -16,6 +16,12 @@ export default function TabLayout() {
     tabBarButton: HapticTab,
   }}
 >
+   <Tabs.Screen
+    name="segredo"
+    options={{
+      title: 'segredo',
+    }}
+  />
   <Tabs.Screen
     name="index"
     options={{
@@ -36,6 +42,8 @@ export default function TabLayout() {
       title: 'Raquelle',
     }}
   />
+ 
 </Tabs>
+
   );
 }
